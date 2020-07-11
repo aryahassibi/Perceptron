@@ -1,4 +1,4 @@
-# This file is for creating functions and initializing variables that are used in multiple files
+# This file is for creating functions and declaring variables that are used in multiple files
 
 from random import uniform
 
@@ -24,6 +24,7 @@ def mapx(var, minimum, maximum, a, b):
 def line_equation(x, map_it=False):
     # The line equation function takes x and returns the slope-intercept based on m and b
     # if map_it was True then it the line function maps the slope-intercept of the line to the height of window
+
     y = m * x + b
     if map_it:
         mapped_y = int(mapx(y, -1, 1, height, 0))
