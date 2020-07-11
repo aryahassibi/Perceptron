@@ -26,7 +26,7 @@ numberOfPoints = 0
 trainingIndex = 0
 done = False
 
-while (not done):
+while not done:
 
     screen.fill(WHITE)
 
@@ -56,12 +56,12 @@ while (not done):
         # showing a green dot for point that are being classified correctly
         # and a red dot for point that are not
         if prediction == target:
-            pygame.draw.circle(screen, GREEN, (pt.mappedx, pt.mappedy), 2)
+            pygame.draw.circle(screen, GREEN, (pt.mapped_x, pt.mapped_y), 2)
         else:
-            pygame.draw.circle(screen, RED, (pt.mappedx, pt.mappedy), 2)
+            pygame.draw.circle(screen, RED, (pt.mapped_x, pt.mapped_y), 2)
 
     # predicted_slope = -(p.weights[0] / p.weights[1])
-    # predicted_y_intecept = -(p.weights[2] / p.weights[1])
+    # predicted_y_intercept = -(p.weights[2] / p.weights[1])
 
     # drawing the desired line
     pygame.draw.line(screen, GRAY, (0, line_equation(-1, True)), (width, line_equation(1, True)), 1)
